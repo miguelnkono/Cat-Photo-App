@@ -1,0 +1,106 @@
+<!DOCTYPE  html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>CatPhotoApp</title>
+    </head>
+
+    <body>
+        <!--HTML5 has some elements that identify different content areas. These elements make your HTML easier to read and help with Search Engine Optimization (SEO) and accessibility.-->
+        <main>
+            <h1>CatPhotoApp</h1>
+            <section>
+                <h2>Cat Photos</h2>
+                <!--TODO: Add link to cat photos-->
+                <!--Add a target attribute with the value _blank to the anchor (a) element's opening tag, so that the link opens in a new tab.-->
+                <!--Before adding any new content, you should make use of a section element to separate the cat photos content from the future content.-->
+                <p>See more <a href="https://freecatphotoapp.com" target="_blank">cat photos</a> in our gallery.</p>
+                <!--You can add images to your website by using the img element. img elements have an opening tag without a closing tag. A tag for an element without a closing tag is known as a self-closing tag.-->
+                <!--HTML attributes are special words used inside the opening tag of an element to control the element's behavior. The src attribute in an img element specifies the image's URL (where the image is located).-->
+                <!--All img elements should have an alt attribute. The alt attribute's text is used for screen readers to improve accessibility and is displayed if the image fails to load. For example, <img src="cat.jpg" alt="A cat"> has an alt attribute with the text A cat.-->
+                <a href="https://freecatphotoapp.com"><img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/relaxing-cat.jpg" alt="A cute orange cat lying on its back"></a>
+                <!--You can link to another page with the anchor (a) element. For example, <a href='https://freecodecamp.org'></a> would link to freecodecamp.org.-->
+            </section>
+            <section>
+                <h2>Cat Lists</h2>
+                <h3>Things cats love:</h3>
+                <ul>          
+                    <li>cat nip</li>
+                    <li>laser pointers</li>
+                    <li>lasagna</li>
+                </ul>
+                <!--Pour  ajouter une legende-->
+                <figure>
+                    <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/lasagna.jpg" alt="A slice of lasagna on a plate.">
+                    <!--A figure caption (figcaption) element is used to add a caption to describe the image contained within the figure element. For example, <figcaption>A cute cat</figcaption> adds the caption A cute cat.-->
+                    <figcaption>Cats <em>love</em> lasagna.</figcaption>
+                </figure>
+                    <h3>Top 3 things cats hate:</h3>
+                    <ol>
+                        <li>flea treatment</li>
+                        <li>thunder</li>
+                        <li>other cats</li>
+                    </ol>
+                    <figure>
+                        <img src="https://cdn.freecodecamp.org/curriculum/cat-photo-app/cats.jpg" alt="Five cats looking around a field.">
+                        <figcaption>Cats <strong>hate</strong> other cats.</figcaption>
+                    </figure>
+            </section>
+            <section>
+                <h2>Cat form</h2>
+                <!--Now you will add a web form to collect information from users.-->
+                <!--The action attribute indicates where form data should be sent. For example, <form action="/submit-url"></form> tells the browser that the form data should be sent to the path /submit-url.-->
+                <form action="https://freecatphotoapp.com/submit-cat-photo">
+                    <!--The input element allows you several ways to collect data from a web form. Like img elements, input elements are self-closing and do not need closing tags.-->
+                    <!--There are many kinds of inputs you can create using the type attribute. You can easily create a password field, reset button, or a control to let users select a file from their computer.-->
+                    <!--In order for a form's data to be accessed by the location specified in the action attribute, you must give the text field a name attribute and assign it a value to represent the data being submitted. For example, you could use the following syntax for an email address text field: <input type="text" name="email">.-->
+                    <!--Placeholder text is used to give people a hint about what kind of information to enter into an input. For example, <input type="text" placeholder="Email address">.-->
+                    <!--To prevent a user from submitting your form when required information is missing, you need to add the required attribute to an input element. There's no need to set a value to the required attribute. Instead, just add the word required to the input element, making sure there is space between it and other attributes.-->
+                    <!--You can use radio buttons for questions where you want only one answer out of multiple options.Here is an example of a radio button with the option of cat: <input type="radio"> cat. Remember that input elements are self-closing.-->
+                    <!--label elements are used to help associate the text for an input element with the input element itself (especially for assistive technologies like screen readers). For example, <label><input type="radio"> cat</label> makes it so clicking the word cat also selects the corresponding radio button.-->
+                    
+                    <!--Notice that both radio buttons can be selected at the same time. To make it so selecting one radio button automatically deselects the other, both buttons must have a name attribute with the same value.-->
+                    <!--The fieldset element is used to group related inputs and labels together in a web form. fieldset elements are block-level elements, meaning that they appear on a new line.-->
+                    <!--The legend element acts as a caption for the content in the fieldset element. It gives users context about what they should enter into that part of the form.-->
+                    <fieldset>
+                        <legend>Is your cat an indoor or outdoor cat?</legend>
+                        <label>
+                            <input type="radio" id="indoor" name="indoor-outdoor" value="indoor" checked>Indoor
+                        </label>
+                        <!--Another button-->
+                        <label>
+                            <input type="radio" id="outdoor" name="indoor-outdoor"  value="outdoor">Outdoor
+                        </label>
+                    </fieldset>
+
+                    <!--There's another way to associate an input element's text with the element itself. You can nest the text within a label element and add a for attribute with the same value as the input element's id attribute.-->
+                    <!--In order to make a checkbox checked or radio button selected by default, you need to add the checked attribute to it. There's no need to set a value to the checked attribute. Instead, just add the word checked to the input element, making sure there is space between it and other attributes.-->
+                    <fieldset>
+                        <legend>What's your cat's personality?</legend>
+                        <!--<input type="checkbox" id="loving"> <label for="loving">Loving</label>-->
+                        <label>
+                            <input type="checkbox" id="loving" name="personality" value="loving" checked> Loving
+                        </label>
+                        <label>
+                            <input type="checkbox" id="lazy" name="personality" value="lazy"> Lazy
+                        </label>
+                        <label>
+                            <input type="checkbox" id="energetic" name="personality" value="energetic"> Energetic
+                        </label>
+                    </fieldset>
+                    
+                    <input type="text" name="catphotourl" placeholder="cat photos URL" required>
+                    <!--Use the button element to create a clickable button. For example, <button>Click Here</button> creates a button with the text Click Here.-->
+                    <!--Add a button element with the text Submit below the input element. The default behavior of clicking a form button without any attributes submits the form to the location specified in the form's action attribute.-->
+                    <button type="submit">Submit</button>
+                    <!--Even though you added your button below the text input, they appear next to each other on the page. That's because both input and button elements are inline elements, which don't appear on new lines.-->
+                </form>
+            </section>
+            <!--Now you will add a footer section to the page.-->
+            <footer>
+                <p>No Copyright - <a href="https://www.freecodecamp.org" target="_blank">freeCodeCamp.org</a></p>
+            </footer>
+        </main>
+    </body>
+</html>
